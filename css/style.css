@@ -1,31 +1,8 @@
 @charset "utf-8";
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* tap키 눌렀을때 까만거 안나오게 */
-  outline-style: none;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-}
-
-img {
-  border: 0;
-  vertical-align: middle;
-}
-
-html {
-  /* html 기본 폰트 사이즈 는 16px */
-  font-size: 16px;
-}
-
-body {
-}
+@import url("layout.css");
+@import url("header.css");
+@import url("goods.css");
+@import url("company.css");
+@import url("news.css");
+@import url("info.css");
+@import url("footer.css");
