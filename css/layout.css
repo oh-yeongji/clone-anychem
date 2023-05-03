@@ -28,13 +28,17 @@ html {
 }
 
 body {
+  font-family: "Nanum Gothic", "Noto Sans KR", sans-serif;
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+  letter-spacing: -0.3px;
+  /* 선택사항 */
+  word-break: keep-all;
 }
 /* 공통클래스 */
 .inner {
-
 }
 
 .wrap {
-
 }
-
