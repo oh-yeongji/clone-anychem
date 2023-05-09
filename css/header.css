@@ -1,0 +1,125 @@
+.header {
+  /* 원래 default값이 블락 */
+  position: relative;
+  display: flex;
+
+  /* flex-start를 하면hover시 같이 내려가지 않음 */
+  align-items: flex-start;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+
+  justify-content: space-between;
+
+  /* overflow: hidden; */
+  transition: height 0.5s;
+  padding: 0px 100px;
+  z-index: 9999;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+  /* 투명하기때문에 반보여요 */
+  transition: opacity 0.5s;
+}
+.header-active {
+  height: 260px !important;
+  box-shadow: 0px 12px 12px -17px rgba(0, 0, 0, 0.25);
+}
+.header-active::before {
+  opacity: 1;
+}
+.logo {
+  /* 위에 달라붙어있는거 떨어지게 */
+  /* align-items: center;로 못하겠어서 */
+  margin-top: 35px;
+}
+
+.nav {
+  /* 다른곳에서 하고있기때문에 두번 말할 필요업성 */
+  /* align-self: flex-start; */
+  /* flex만으로는 못해서 */
+  /* padding-top: 35px; */
+  /* 갭이랑 같이 움직여줌 */
+  margin-left: 240px;
+}
+.gnb {
+  /* display:flex라고 작성을 하면 flex-container */
+  display: flex;
+  /* 가로 여백이 남는경우 여백처리 */
+  /* justify-content: space-between; */
+  gap: 0 50px;
+}
+.gnb > li {
+  /*엄마가 컨트롤 중 */
+  /* 서브메뉴의 엄마라서  */
+  /* 지금은 자식이 없어서 있어도되고 없어도되고 */
+  position: relative;
+}
+
+/* 주메뉴*/
+.gnb > li > a {
+  /* display 안맞아서 */
+  display: block;
+  font-size: 18px;
+  color: #222;
+  letter-spacing: -0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  font-family: "Noto Sans KR";
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.submenu {
+  /* 너비높이에 영향을 주고있다 */
+  display: block;
+  /* 너비높이에 영향을 주지마라 */
+  /* width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100px; */
+  /* position:absolute깨면 위로 올라간다. */
+}
+.submenu li {
+}
+
+.submenu li a {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  line-height: 26px;
+  color: #08151d;
+  font-weight: 300;
+  font-family: "Noto Sans KR";
+  white-space: nowrap;
+}
+.submenu li a:hover {
+  color: #999;
+}
+.side-wrap {
+  /* defalut값이 stretch가 걸리면 */
+  padding: 18px;
+  background: #f5f9ff;
+  border-radius: 36px;
+  margin-top: 20px;
+}
+.member {
+  display: flex;
+  /* container에 gap을 줘야하기 때문에 */
+  gap: 0 26px;
+}
+.member li {
+}
+.member li a {
+  font-size: 13px;
+  color: #7e7e7e;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+}
