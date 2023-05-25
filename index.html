@@ -63,10 +63,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- anime.js -->
+    <!-- Anime.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script src="js/mbnav.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/visual.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -80,7 +88,7 @@
           </div>
           <ul class="side-menu">
             <li>
-              <a href="#"
+              <a href="#" target="_blank"
                 ><span>회사소개</span><i class="fa-solid fa-chevron-down"></i
               ></a>
               <ul class="submenu">
@@ -142,7 +150,6 @@
         </nav>
       </div>
       <!-- mb nav -->
-      <!-- button은 요소(element) onclick은 event고 무슨일이 일어났다는 의미 -->
       <button class="mb-nav">
         <span></span>
         <span></span>
@@ -158,70 +165,44 @@
             <li>
               <a href="#">회사소개</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">인사말</a>
-                </li>
-                <li>
-                  <a href="#">연혁</a>
-                </li>
-                <li>
-                  <a href="#">오시는 길</a>
-                </li>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">오시는 길</a></li>
               </ul>
             </li>
             <li>
               <a href="#">탄소중립대응 친환경 제품</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">플라스틱 포장재</a>
-                </li>
-                <li>
-                  <a href="#">농업용 필름</a>
-                </li>
-                <li>
-                  <a href="#">자동차용 소재</a>
-                </li>
-                <li>
-                  <a href="#">코팅종이</a>
-                </li>
+                <li><a href="#">플라스틱 포장재</a></li>
+                <li><a href="#">농업용 필름</a></li>
+                <li><a href="#">자동차용 소재</a></li>
+                <li><a href="#">코팅종이</a></li>
               </ul>
             </li>
             <li>
               <a href="#">뉴스.보도자료</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">개발제품 뉴스 . 보도자료</a>
-                </li>
-                <li>
-                  <a href="#">탄소중립 관련 뉴스 . 보도자료</a>
-                </li>
+                <li><a href="#">개발제품 뉴스 . 보도자료</a></li>
+                <li><a href="#">탄소중립 관련 뉴스 . 보도자료</a></li>
               </ul>
             </li>
             <li>
               <a href="#">인증</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">UL인증</a>
-                </li>
-                <li>
-                  <a href="#">녹색인증</a>
-                </li>
+                <li><a href="#">UL인증</a></li>
+                <li><a href="#">녹색인증</a></li>
               </ul>
             </li>
             <li>
               <a href="#">제품문의</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">제품문의</a>
-                </li>
+                <li><a href="#">제품문의</a></li>
               </ul>
             </li>
             <li>
               <a href="#">고객센터</a>
               <ul class="submenu">
-                <li>
-                  <a href="#">공지사항</a>
-                </li>
+                <li><a href="#">공지사항</a></li>
               </ul>
             </li>
           </ul>
@@ -229,22 +210,22 @@
         </nav>
         <div class="side-wrap">
           <ul class="member">
-            <li>
-              <a href="#">로그인</a>
-            </li>
-            <li>
-              <a href="#">회원가입</a>
-            </li>
-            <li>
-              <a href="#">ENG</a>
-            </li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">ENG</a></li>
           </ul>
         </div>
       </header>
       <!--// header -->
       <!-- visual -->
       <section class="visual">
-        <div class="inner"></div>
+        <div class="visual-slide">
+          <div class="swiper sw-visual">
+            <div class="swiper-wrapper">
+              <!-- json 연동 -->
+            </div>
+          </div>
+        </div>
       </section>
       <!--// visual -->
       <!-- goods -->
@@ -268,9 +249,9 @@
       </section>
       <!--// info -->
       <!-- footer -->
-      <footer class="footer">
+      <section class="footer">
         <div class="inner"></div>
-      </footer>
+      </section>
       <!--// footer -->
     </div>
   </body>
