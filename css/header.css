@@ -8,12 +8,13 @@
   width: 100%;
   height: 100px;
   background: #fff;
-
+  overflow: hidden;
   justify-content: space-between;
 
   /* overflow: hidden; */
-  transition: height 0.5s;
+  /* transition: height 0.5s; */
   padding: 0px 100px;
+  transition: height 0.5s, padding 0.5s;
   z-index: 9999;
 }
 .header::before {
@@ -24,8 +25,8 @@
   width: 100%;
   height: 1px;
   background: rgba(0, 0, 0, 0.1);
-  /* 투명하기때문에 반보여요 */
-  transition: opacity 0.5s;
+  /* 투명하기때문에 안보여요 */
+  /* transition: opacity 0.5s; */
 }
 .header-active {
   height: 260px !important;
@@ -38,6 +39,7 @@
   /* 위에 달라붙어있는거 떨어지게 */
   /* align-items: center;로 못하겠어서 */
   margin-top: 35px;
+  transition: margin 0.3s;
 }
 
 .nav {
@@ -47,13 +49,25 @@
   /* padding-top: 35px; */
   /* 갭이랑 같이 움직여줌 */
   margin-left: 240px;
+  transition: margin 0.5s;
 }
+.nav-blue-bar {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 0px;
+  height: 1px;
+  background: #0072ff;
+}
+
 .gnb {
   /* display:flex라고 작성을 하면 flex-container */
   display: flex;
   /* 가로 여백이 남는경우 여백처리 */
   /* justify-content: space-between; */
   gap: 0 50px;
+  transition: gap 0.5s;
 }
 .gnb > li {
   /*엄마가 컨트롤 중 */
@@ -122,4 +136,57 @@
   color: #7e7e7e;
   font-family: "Noto Sans KR";
   font-weight: 700;
+}
+/* header 반응형 */
+@media screen and (max-width: 1720px) {
+  .nav {
+    margin-left: 90px;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  .header {
+    padding: 0px 70px;
+  }
+  .gnb {
+    gap: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .side-wrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .header {
+    padding: 0 40px;
+  }
+  .nav {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .gnb > li > a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  .gnb {
+    gap: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    height: 75px;
+  }
+  .logo {
+    margin-top: 20px;
+  }
+  .nav {
+    display: none;
+  }
 }
