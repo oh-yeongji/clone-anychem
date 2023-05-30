@@ -38,6 +38,11 @@ body {
 }
 /* 공통클래스 */
 .inner {
+  display: block;
+  width: 100%;
+  max-width: 1500px;
+  position: relative;
+  margin: 0 auto;
 }
 
 .wrap {
