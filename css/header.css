@@ -1,6 +1,8 @@
 .header {
   /* 원래 default값이 블락 */
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
   display: flex;
 
   /* flex-start를 하면hover시 같이 내려가지 않음 */
@@ -16,6 +18,12 @@
   padding: 0px 100px;
   transition: height 0.5s, padding 0.5s;
   z-index: 9999;
+}
+.header-fixed {
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
 }
 .header::before {
   content: "";
@@ -182,6 +190,7 @@
 @media screen and (max-width: 1000px) {
   .header {
     height: 75px;
+    padding: 0 20px;
   }
   .logo {
     margin-top: 20px;
