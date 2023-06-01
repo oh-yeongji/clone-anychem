@@ -1,0 +1,32 @@
+{
+  "goods": [
+    {
+      "link": "#",
+      "image": "good1.jpg",
+      "alt": "제품1",
+      "title": "제품1 제목",
+      "desc": "제품1 설명"
+    },
+    {
+      "link": "#",
+      "image": "good2.jpg",
+      "alt": "제품2",
+      "title": "제품2 제목",
+      "desc": "제품2 설명"
+    },
+    {
+      "link": "#",
+      "image": "good3.jpg",
+      "alt": "제품3",
+      "title": "제품3 제목",
+      "desc": "제품3 설명"
+    },
+    {
+      "link": "#",
+      "image": "good4.jpg",
+      "alt": "제품4",
+      "title": "제품4 제목",
+      "desc": "제품4 설명"
+    }
+  ]
+}
