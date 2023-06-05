@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
   //   .catch((err) => console.log(err));
 
   let swGoods;
-  const SLIDECOUNT = 4;
+  // const SLIDECOUNT = 4;
 
   const getData = async function () {
     try {
@@ -23,9 +23,11 @@ window.addEventListener("load", function () {
     let html = ``;
     let copyArr = [..._data.goods];
 
-    if (copyArr.length <= SLIDECOUNT) {
-      copyArr = [..._data.goods, ..._data.goods];
-    }
+    //swiper 버전에 따른 문제 발생
+    //강제 목록 추가 제거
+    // if (copyArr.length <= SLIDECOUNT) {
+    //   copyArr = [..._data.goods, ..._data.goods];
+    // }
 
     copyArr.forEach((item, index, arr) => {
       let tag = `
@@ -51,8 +53,10 @@ window.addEventListener("load", function () {
 
   function makeSlideShow() {
     swGoods = new Swiper(".sw-goods", {
-      slidesPerView: 3,
       loop: true,
+      speed: 1000,
+      slidesPerView: 3,
+      spaceBetween: 20,
       navigation: {
         prevEl: ".sw-goods-prev",
         nextEl: ".sw-goods-next",
@@ -61,15 +65,31 @@ window.addEventListener("load", function () {
         delay: 1000,
         disableOnInteraction: false,
       },
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        1400: {
+          slidesPerView: 3,
+          spaceBetween: 50,
+        },
+      },
     });
     swGoods.on("slideChange", function () {
-      let count = this.realIndex % SLIDECOUNT;
-      focusMenu(count);
+      // let count = this.realIndex % SLIDECOUNT;
+      focusMenu(this.realIndex);
     });
+    console.log("gogo");
+    focusMenu(0);
   }
 
   function focusMenu(_index) {
-    let lis = document.querySelectorAll(".goods-list li a");
+    let lis = document.querySelectorAll(".goods-list li");
     lis.forEach((item, index, arr) => {
       if (index === _index) {
         // 순서번호랑 슬라이드 번호가 같다면 add
@@ -99,6 +119,7 @@ window.addEventListener("load", function () {
         swGoods.slideToLoop(index);
       };
     });
+    focusMenu(0);
   }
 
   getData();

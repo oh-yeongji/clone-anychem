@@ -1,6 +1,7 @@
 .goods {
 }
 .goods-wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 130px 0;
@@ -33,15 +34,28 @@
 .goods-list {
 }
 .goods-list li {
+  position: relative;
+}
+.goods-list li:before {
+  content: "";
+  position: absolute;
+  left: -210px;
+  top: 50%;
+  width: 210px;
+  height: 1px;
+  background: blue;
+  width: 0;
+  transition: opacitu 0.5s, width 0.5s;
 }
 .goods-list li a {
   display: block;
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: 400;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 18px;
   line-height: 1.6;
-  /* line-height: 27.2px; */
-  color: #777;
+  color: #000;
+  opacity: 0.2;
+  transition: padding 0.5s, opacity 0.5s;
 }
 .sw-goods-control {
   display: flex;
@@ -64,6 +78,9 @@
 .sw-goods-next {
 }
 .goods-slide {
+  position: absolute;
+  right: 0;
+  top: 100px;
   width: 66.66%;
 }
 .sw-goods {
@@ -110,6 +127,12 @@
   height: 550px;
   box-shadow: 0 6px 31px 2px rgba(0, 0, 0, 0.2);
 }
-.focus {
-  color: red !important;
+
+.focus::before {
+  width: 210px !important;
+  opacity: 1 !important;
+}
+.focus a {
+  opacity: 1 !important;
+  padding-left: 30px;
 }
