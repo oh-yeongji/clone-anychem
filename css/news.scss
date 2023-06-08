@@ -1,5 +1,30 @@
+.news {
+  .inner {
+    .news-slide {
+      .swiper-wrapper {
+        .swiper-slide {
+          .news-box {
+            a {
+              &:hover {
+              }
+              &:active {
+              }
+              &:focus {
+              }
+              span {
+              }
 
-  .news {
-    .inner {
+              p {
+              }
+
+              span {
+                .fa-regular.fa-clock {
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
+}
