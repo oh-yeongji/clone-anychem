@@ -1,0 +1,40 @@
+.info {
+  background: #f5f9ff;
+  .inner {
+    padding: 60px 0;
+
+    .info-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .info-map {
+        .info-map-link {
+          .info-map-title {
+          }
+          .info-map-txt {
+          }
+          .info-map-img {
+          }
+        }
+      }
+      .info-notice {
+        &-title {
+        }
+        &-link {
+        }
+        &-list {
+        }
+      }
+      .info-faq {
+        &-title {
+        }
+        &-tel {
+        }
+        &-mail {
+        }
+        &-link {
+        }
+      }
+    }
+  }
+}

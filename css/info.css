@@ -1,0 +1,10 @@
+.info {
+  background: #f5f9ff;
+}
+.info .inner {
+  padding: 60px 0;
+}
+.info .inner .info-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
