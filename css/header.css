@@ -109,8 +109,7 @@
   top: 100px; */
   /* position:absolute깨면 위로 올라간다. */
 }
-.submenu li {
-}
+
 
 .submenu li a {
   display: block;
@@ -137,8 +136,7 @@
   /* container에 gap을 줘야하기 때문에 */
   gap: 0 26px;
 }
-.member li {
-}
+
 .member li a {
   font-size: 13px;
   color: #7e7e7e;
